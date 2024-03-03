@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import SvgProfile from '../SVGs/profile.svg';
 
 interface menuItemProps {
   pathName: string;
@@ -7,7 +6,7 @@ interface menuItemProps {
   svg: JSX.Element;
 }
 
-const sidebarMenuItem = ({ pathName, itemName, svg }: menuItemProps) => {
+const SidebarItem = ({ pathName, itemName, svg }: menuItemProps) => {
   return (
     <li>
       <NavLink
@@ -23,4 +22,4 @@ const sidebarMenuItem = ({ pathName, itemName, svg }: menuItemProps) => {
   );
 };
 
-export default sidebarMenuItem;
+export default SidebarItem;
