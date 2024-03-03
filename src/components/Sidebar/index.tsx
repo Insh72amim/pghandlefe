@@ -1,20 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import Logo from '../../images/logo/logo.svg';
-import SVGdashboard from '../SVGs/dashboard';
 import SidebarItem from './SidebarItem';
-import SvgProfile from '../SVGs/profile.svg';
-import SvgTable from '../SVGs/table.svg';
-import SvgSettings from '../SVGs/settings.svg';
-import SvgCalendar from '../SVGs/calendar.svg';
-import SvgChart from '../SVGs/chart.svg';
-import SidebarGroup from './SidebarGroup';
-import SidebarGroupItem from './SidebarGroupItem';
-import SvgFormSideBar from '../SVGs/form.svg';
-import SvgUIElement from '../SVGs/uielement.svg';
-import SvgAuthSideBar from '../SVGs/auth.svg';
 import SVGsidebarButton from '../SVGs/sidebarbutton.svg';
-import checkin from '../../images/sidebar/calendar.svg';
+import dashboard from '../../images/sidebar/dashboard.svg';
+import availability from '../../images/sidebar/availability.svg';
+import guests from '../../images/sidebar/guests.svg';
+import booking from '../../images/sidebar/booking.svg';
+import checkin from '../../images/sidebar/checkin.svg';
+import checkout from '../../images/sidebar/checkout.svg';
+import pg from '../../images/sidebar/pg.svg';
+import premises from '../../images/sidebar/premises.svg';
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -100,62 +96,38 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             </h3>
 
             <ul className="mb-6 flex flex-col gap-1.5">
-              <SidebarGroup
-                activeCondition={
-                  pathname === '/' || pathname.includes('dashboard')
-                }
-                pathName="/"
-                itemName="Dashboard"
-                sidebarExpanded={sidebarExpanded}
-                setSidebarExpanded={setSidebarExpanded}
-                svg={
-                  <img src={checkin} alt="Dashboard" width={20} height={20} />
-                }
-              >
-                <SidebarGroupItem
-                  itemName="e Commerce"
-                  pathName="/"
-                ></SidebarGroupItem>
-              </SidebarGroup>
-              <SidebarGroup
-                activeCondition={
-                  pathname === '/forms' || pathname.includes('forms')
-                }
-                pathName="/forms"
-                itemName="Form"
-                sidebarExpanded={sidebarExpanded}
-                setSidebarExpanded={setSidebarExpanded}
-                svg={<SvgFormSideBar />}
-              >
-                <SidebarGroupItem
-                  itemName="Form Elements"
-                  pathName="/forms/form-elements"
-                ></SidebarGroupItem>
-                <SidebarGroupItem
-                  itemName="Form Layout"
-                  pathName="/forms/form-layout"
-                ></SidebarGroupItem>
-              </SidebarGroup>
               <SidebarItem
-                itemName="calendar"
+                itemName="Dashboard"
+                pathName="/"
+                svg={<img src={dashboard} alt="Logo" width="20" height="20" />}
+              />
+              <SidebarItem
+                itemName="Availability"
+                pathName={pathname}
+                svg={
+                  <img src={availability} alt="Logo" width="20" height="20" />
+                }
+              />
+              <SidebarItem
+                itemName="Guests"
+                pathName={pathname}
+                svg={<img src={guests} alt="Logo" width="20" height="20" />}
+              />
+              <SidebarItem
+                itemName="Bookings"
+                pathName={pathname}
+                svg={<img src={booking} alt="Logo" width="20" height="20" />}
+              />
+              <SidebarItem
+                itemName="CheckIns"
                 pathName={pathname}
                 svg={<img src={checkin} alt="Logo" width="20" height="20" />}
-              ></SidebarItem>
+              />
               <SidebarItem
-                itemName="profile"
+                itemName="CheckOuts"
                 pathName={pathname}
-                svg={<SvgProfile />}
-              ></SidebarItem>
-              <SidebarItem
-                itemName="tables"
-                pathName={pathname}
-                svg={<SvgTable />}
-              ></SidebarItem>
-              <SidebarItem
-                itemName="settings"
-                pathName={pathname}
-                svg={<SvgSettings />}
-              ></SidebarItem>{' '}
+                svg={<img src={checkout} alt="Logo" width="20" height="20" />}
+              />
             </ul>
           </div>
 
@@ -166,46 +138,15 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
             <ul className="mb-6 flex flex-col gap-1.5">
               <SidebarItem
-                itemName="chart"
+                itemName="PG Info"
                 pathName={pathname}
-                svg={<SvgChart />}
-              ></SidebarItem>{' '}
-              <SidebarGroup
-                activeCondition={pathname === '/ui' || pathname.includes('ui')}
-                pathName="/ui"
-                itemName="UI Elements"
-                sidebarExpanded={sidebarExpanded}
-                setSidebarExpanded={setSidebarExpanded}
-                svg={<SvgUIElement></SvgUIElement>}
-              >
-                <SidebarGroupItem
-                  itemName="Alerts"
-                  pathName="/ui/alerts"
-                ></SidebarGroupItem>
-                <SidebarGroupItem
-                  itemName="Buttons"
-                  pathName="/ui/buttons"
-                ></SidebarGroupItem>
-              </SidebarGroup>
-              <SidebarGroup
-                activeCondition={
-                  pathname === '/auth' || pathname.includes('auth')
-                }
-                pathName="/auth"
-                itemName="Authentication"
-                sidebarExpanded={sidebarExpanded}
-                setSidebarExpanded={setSidebarExpanded}
-                svg={<SvgAuthSideBar></SvgAuthSideBar>}
-              >
-                <SidebarGroupItem
-                  itemName="Sign In"
-                  pathName="/auth/signin"
-                ></SidebarGroupItem>
-                <SidebarGroupItem
-                  itemName="Sign Up"
-                  pathName="/auth/signup"
-                ></SidebarGroupItem>
-              </SidebarGroup>
+                svg={<img src={pg} alt="Logo" width="20" height="20" />}
+              />
+              <SidebarItem
+                itemName="Premises"
+                pathName={pathname}
+                svg={<img src={premises} alt="Logo" width="20" height="20" />}
+              />
             </ul>
           </div>
         </nav>

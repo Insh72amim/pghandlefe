@@ -43,6 +43,16 @@ function App() {
           }
         />
         <Route
+          index
+          path="/dashboard"
+          element={
+            <>
+              <PageTitle title="PG Handle" />
+              <ECommerce />
+            </>
+          }
+        />
+        <Route
           path="/calendar"
           element={
             <>
