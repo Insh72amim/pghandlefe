@@ -182,7 +182,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.0784px;line-height:0.7;font-family:'.Geeza Pro PUA';-inkscape-font-specification:'.Geeza Pro PUA, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;white-space:pre;inline-size:184.525;display:inline;fill:#1c71d8;fill-opacity:1;stroke-width:0.720085;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.0784px;line-height:0.7;font-family:'.Geeza Pro PUA';-inkscape-font-specification:'.Geeza Pro PUA, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;white-space:pre;inline-size:184.525;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.720085;stroke-dasharray:none"
        x="134.16673"
        y="6.1747661"
        id="text46"
@@ -190,14 +190,14 @@
        inkscape:label="Name"><tspan
          x="134.16673"
          y="6.1747661"
-         id="tspan6"><tspan
+         id="tspan2"><tspan
            style="font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal'"
-           id="tspan5">PG 
+           id="tspan1">PG 
 </tspan></tspan><tspan
          x="134.16673"
          y="46.305625"
-         id="tspan8"><tspan
+         id="tspan4"><tspan
            style="font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal'"
-           id="tspan7">Handle</tspan></tspan></text>
+           id="tspan3">Handle</tspan></tspan></text>
   </g>
 </svg>
