@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import Logo from '../../images/logo/logo.svg';
 import SidebarItem from './SidebarItem';
-import SVGsidebarButton from '../SVGs/sidebarbutton.svg';
-import dashboard from '../../images/sidebar/dashboard.svg';
-import availability from '../../images/sidebar/availability.svg';
+import DarkModeSwitcher from './DarkModeSwitcher';
+
+import pg from '../../images/sidebar/pg.svg';
+import Logo from '../../images/logo/logo.svg';
 import guests from '../../images/sidebar/guests.svg';
 import booking from '../../images/sidebar/booking.svg';
 import checkin from '../../images/sidebar/checkin.svg';
 import checkout from '../../images/sidebar/checkout.svg';
-import pg from '../../images/sidebar/pg.svg';
 import premises from '../../images/sidebar/premises.svg';
-import DarkModeSwitcher from '../Header/DarkModeSwitcher';
+import SVGsidebarButton from '../SVGs/sidebarbutton.svg';
+import dashboard from '../../images/sidebar/dashboard.svg';
+import availability from '../../images/sidebar/availability.svg';
 
 interface SidebarProps {
   sidebarOpen: boolean;
