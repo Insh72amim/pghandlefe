@@ -23,17 +23,29 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.13526597"
-     inkscape:cx="2014.5496"
-     inkscape:cy="1186.5512"
+     inkscape:zoom="0.55547365"
+     inkscape:cx="661.59754"
+     inkscape:cy="432.96383"
      inkscape:window-width="1512"
-     inkscape:window-height="866"
+     inkscape:window-height="862"
      inkscape:window-x="0"
      inkscape:window-y="38"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
+    <rect
+       x="685.90112"
+       y="428.46317"
+       width="491.47246"
+       height="280.8414"
+       id="rect7" />
+    <rect
+       x="190.82813"
+       y="73.810882"
+       width="1080.1592"
+       height="739.90909"
+       id="rect6" />
     <inkscape:perspective
        sodipodi:type="inkscape:persp3d"
        inkscape:vp_x="-17.935557 : 43.905778 : 1"
@@ -182,22 +194,34 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.0784px;line-height:0.7;font-family:'.Geeza Pro PUA';-inkscape-font-specification:'.Geeza Pro PUA, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;white-space:pre;inline-size:184.525;display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.720085;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.0784px;line-height:0.7;font-family:'.Geeza Pro PUA';-inkscape-font-specification:'.Geeza Pro PUA, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;white-space:pre;inline-size:184.525;display:inline;fill:#62a0ea;fill-opacity:1;stroke-width:0.720085;stroke-dasharray:none"
        x="134.16673"
        y="6.1747661"
        id="text46"
-       transform="matrix(0.97913303,0,0,1.4724139,8.3859073,3.6548996)"
+       transform="matrix(0.97913303,0,0,1.4724139,2.1937444,11.276023)"
        inkscape:label="Name"><tspan
          x="134.16673"
          y="6.1747661"
-         id="tspan2"><tspan
+         id="tspan5"><tspan
+           style="font-family:'DIN Alternate';-inkscape-font-specification:'DIN Alternate'"
+           id="tspan1">PG </tspan><tspan
            style="font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal'"
-           id="tspan1">PG 
+           id="tspan3">
 </tspan></tspan><tspan
          x="134.16673"
-         y="46.305625"
-         id="tspan4"><tspan
-           style="font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal'"
-           id="tspan3">Handle</tspan></tspan></text>
+         y="47.01926"
+         id="tspan10"><tspan
+           style="font-family:'DIN Alternate';-inkscape-font-specification:'DIN Alternate'"
+           id="tspan9">Handle</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-114.52119,-137.17373)"
+       id="text6"
+       style="fill:#ffffff;stroke-width:2.81952756;font-size:200px;-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-family:'Arial Rounded MT Bold';line-height:0.7;text-align:center;letter-spacing:0.01px;word-spacing:0px;stroke:#ffffff;white-space:pre;shape-inside:url(#rect6)" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-114.52119,-137.17373)"
+       id="text7"
+       style="fill:#ffffff;stroke-width:2.81952756;font-size:200px;-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-family:'Arial Rounded MT Bold';line-height:0.7;text-align:center;letter-spacing:0.01px;word-spacing:0px;stroke:#ffffff;white-space:pre;shape-inside:url(#rect7)" />
   </g>
 </svg>

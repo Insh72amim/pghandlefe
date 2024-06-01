@@ -11,6 +11,7 @@ import checkin from '../../images/sidebar/checkin.svg';
 import checkout from '../../images/sidebar/checkout.svg';
 import pg from '../../images/sidebar/pg.svg';
 import premises from '../../images/sidebar/premises.svg';
+import DarkModeSwitcher from '../Header/DarkModeSwitcher';
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -76,7 +77,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         <NavLink to="/">
           <img src={Logo} alt="Logo" />
         </NavLink>
-
+        <DarkModeSwitcher />
         <button
           ref={trigger}
           onClick={() => setSidebarOpen(!sidebarOpen)}
