@@ -1,15 +1,38 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { FormEvent, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumbs/Breadcrumb';
 import LogoDark from '../../images/logo/logo.svg';
 import Logo from '../../images/logo/logo.svg';
 import DefaultLayout from '../../layout/DefaultLayout';
 import GoogleLogo from '../../components/SVGs/google.svg';
 import { LockSvg } from '../../components/SVGs/authlogo.svg';
+import { signIn, verifyToken } from '../../apis/auth.api';
+import { useAuth } from './AuthContext';
 
 const SignIn: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  const authentication = useAuth();
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const res = await signIn({
+        email,
+        password,
+      });
+      const verify = await verifyToken({ access_token: res.access_token });
+
+      if (verify.valid && verify.decoded.email === email) {
+        authentication?.login(res.access_token);
+        navigate('/');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <DefaultLayout>
@@ -35,7 +58,7 @@ const SignIn: React.FC = () => {
                 Sign In to PgHandle
               </h2>
 
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="mb-2.5 block font-medium text-black dark:text-white">
                     Email
@@ -45,6 +68,8 @@ const SignIn: React.FC = () => {
                       type="email"
                       placeholder="Enter your email"
                       className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>
@@ -58,6 +83,8 @@ const SignIn: React.FC = () => {
                       type="password"
                       placeholder="6+ Characters, 1 Capital letter"
                       className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
 
                     <span className="absolute right-4 top-4">

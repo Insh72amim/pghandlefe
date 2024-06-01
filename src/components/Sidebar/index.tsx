@@ -42,7 +42,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       setSidebarOpen(false);
     };
     document.addEventListener('click', clickHandler);
-    console.log('hello');
+
     return () => document.removeEventListener('click', clickHandler);
   });
 
@@ -97,34 +97,34 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
             <ul className="mb-6 flex flex-col gap-1.5">
               <SidebarItem
-                itemName="Dashboard"
+                itemName="dashboard"
                 pathName="/"
                 svg={<img src={dashboard} alt="Logo" width="20" height="20" />}
               />
               <SidebarItem
-                itemName="Availability"
+                itemName="availability"
                 pathName={pathname}
                 svg={
                   <img src={availability} alt="Logo" width="20" height="20" />
                 }
               />
               <SidebarItem
-                itemName="Guests"
+                itemName="guests"
                 pathName={pathname}
                 svg={<img src={guests} alt="Logo" width="20" height="20" />}
               />
               <SidebarItem
-                itemName="Bookings"
+                itemName="bookings"
                 pathName={pathname}
                 svg={<img src={booking} alt="Logo" width="20" height="20" />}
               />
               <SidebarItem
-                itemName="CheckIns"
+                itemName="checkins"
                 pathName={pathname}
                 svg={<img src={checkin} alt="Logo" width="20" height="20" />}
               />
               <SidebarItem
-                itemName="CheckOuts"
+                itemName="checkouts"
                 pathName={pathname}
                 svg={<img src={checkout} alt="Logo" width="20" height="20" />}
               />
@@ -138,12 +138,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
             <ul className="mb-6 flex flex-col gap-1.5">
               <SidebarItem
-                itemName="PG Info"
+                itemName="pg"
                 pathName={pathname}
                 svg={<img src={pg} alt="Logo" width="20" height="20" />}
               />
               <SidebarItem
-                itemName="Premises"
+                itemName="premises"
                 pathName={pathname}
                 svg={<img src={premises} alt="Logo" width="20" height="20" />}
               />

@@ -1,9 +1,6 @@
 import React from 'react';
 import CardDataStats from '../../components/CardDataStats';
 import DefaultLayout from '../../layout/DefaultLayout';
-import LocalCircularGauge from './LocalCircularGauge';
-import ChartOne from '../../components/Charts/ChartOne';
-import ChartThree from '../../components/Charts/ChartThree';
 
 const Dashboard: React.FC = () => {
   return (

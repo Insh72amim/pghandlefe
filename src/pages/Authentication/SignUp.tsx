@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { FormEvent, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumbs/Breadcrumb';
 import LogoDark from '../../images/logo/logo.svg';
 import Logo from '../../images/logo/logo.svg';
@@ -10,6 +10,7 @@ import {
   PersonSVG,
 } from '../../components/SVGs/authlogo.svg';
 import GoogleLogo from '../../components/SVGs/google.svg';
+import { signUp } from '../../apis/auth.api';
 
 const SignUp: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -17,24 +18,21 @@ const SignUp: React.FC = () => {
   const [passwordRetype, setPasswordRetype] = useState('');
   const [name, setName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log('Going to make a request');
-
-    console.log({ email, password, passwordRetype, name, mobileNumber });
 
     try {
-      const res = await fetch(
-        'http://localhost:5647/v1/owner/53c0b893-ffb5-45ae-b681-00cba1ad02f8',
-        { credentials: 'include' },
-      );
-
-      const response = await res.json();
-
-      console.log(response);
+      await signUp({
+        name,
+        email,
+        password,
+        mobileNumber,
+      });
+      navigate('/auth/signin');
     } catch (error) {
-      console.log('This is erro', error);
+      console.log(error);
     }
   };
 
