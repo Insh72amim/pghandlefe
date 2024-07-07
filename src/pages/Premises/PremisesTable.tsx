@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import { getBedsInPgByPgId, getPGListByOwnerId } from '../../apis/pg.api';
 import { getUserId } from '../../utils/getUserId';
 import { PG } from '../../types/entities';
+import AddPremiseModal from './AddPremise.modal';
+import AddPremiseForm from './AddPremise.form';
 
 const PremisesTable = () => {
   const [pgList, setPGLList] = useState<PG[]>([]);
@@ -12,6 +14,15 @@ const PremisesTable = () => {
       total: number;
     };
   }>({});
+
+  const [addPremiseModalOpened, setAddPremiseModalOpened] = useState(false);
+  const handleOpenModal = () => {
+    setAddPremiseModalOpened(true);
+  };
+
+  const handleCloseModal = () => {
+    setAddPremiseModalOpened(false);
+  };
 
   useEffect(() => {
     const fetchPgData = async () => {
@@ -47,12 +58,22 @@ const PremisesTable = () => {
   return (
     <div className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
       <div className="flex flex-row justify-between">
-        <h4 className="mb-6 text-xl font-semibold text-black dark:text-white">
+        <h4 className="mb-2 text-xl font-semibold text-black dark:text-white">
           Premises Listed
         </h4>{' '}
-        <h4 className="mb-6 text-xl font-semibold text-black dark:text-white">
-          Top Channels
-        </h4>
+        <button
+          className="mb-4 inline-flex items-center justify-center rounded-full bg-blue-800 py-4 px-10 text-center font-medium text-white hover:bg-opacity-90 lg:px-8 xl:px-10"
+          onClick={handleOpenModal}
+        >
+          Add PG
+        </button>
+        <AddPremiseModal
+          show={addPremiseModalOpened}
+          handleClose={handleCloseModal}
+          children={
+            <AddPremiseForm handleClose={handleCloseModal}></AddPremiseForm>
+          }
+        ></AddPremiseModal>
       </div>
 
       <div className="flex flex-col">

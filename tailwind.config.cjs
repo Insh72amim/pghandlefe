@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -16,6 +16,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        customGray: '#65737E',
         current: 'currentColor',
         transparent: 'transparent',
         white: '#FFFFFF',
@@ -251,4 +252,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};

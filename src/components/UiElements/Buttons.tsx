@@ -5,9 +5,7 @@ import DefaultLayout from '../../layout/DefaultLayout';
 
 const Buttons = () => {
   return (
-    <DefaultLayout>
-      <Breadcrumb pageName="Buttons" />
-
+    <div>
       {/* <!-- Normal Button Items --> */}
       <div className="mb-10 rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
         <div className="border-b border-stroke px-7 py-4 dark:border-strokedark">
@@ -465,7 +463,7 @@ const Buttons = () => {
           </div>
         </div>
       </div>
-    </DefaultLayout>
+    </div>
   );
 };
 

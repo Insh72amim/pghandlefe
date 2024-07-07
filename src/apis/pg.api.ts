@@ -1,3 +1,4 @@
+import { Pg } from '../types/PG';
 import { apiClient } from './apiclient';
 
 export const getPGListByOwnerId = async (ownerId: string) => {
@@ -17,6 +18,15 @@ export const getBedsInPgByPgId = async (
     let route = `/v1/pg/${pgId}/beds`;
     if (available) route += '?available=true';
     const response = await apiClient.get(route);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const AddPG = async (data: Pg) => {
+  try {
+    const response = await apiClient.post('/v1/pg', data);
     return response.data;
   } catch (error) {
     throw error;
