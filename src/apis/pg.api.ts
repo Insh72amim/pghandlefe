@@ -24,9 +24,18 @@ export const getBedsInPgByPgId = async (
   }
 };
 
-export const AddPG = async (data: Pg) => {
+export const addPg = async (data: Pg) => {
   try {
     const response = await apiClient.post('/v1/pg', data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getPGById = async (pgId: string) => {
+  try {
+    const response = await apiClient.get(`/v1/pg/${pgId}`);
     return response.data;
   } catch (error) {
     throw error;

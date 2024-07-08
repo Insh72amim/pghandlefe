@@ -2,8 +2,8 @@ import { FormEvent, useState } from 'react';
 import SwitchBox from '../../components/Switchers/SwitchBox';
 import InputField from '../../components/Form/InputField';
 import { Link } from 'react-router-dom';
-import { AddPG } from '../../apis/pg.api';
-import { verifyToken } from '../../apis/auth.api';
+import { addPg } from '../../apis/pg.api';
+import { getUserId } from '../../utils/getUserId';
 
 const AddPremiseForm = ({ handleClose }: { handleClose: () => void }) => {
   const [pgName, setPgName] = useState('');
@@ -31,13 +31,11 @@ const AddPremiseForm = ({ handleClose }: { handleClose: () => void }) => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const access_token = localStorage.getItem('access_token');
-    const verify = await verifyToken({ access_token });
-    if (verify.valid === false) return;
+    const ownerId = await getUserId();
 
     try {
-      await AddPG({
-        owner: verify.decoded.sub,
+      await addPg({
+        owner: ownerId,
         name: pgName,
         contactNumber,
         totalFloors,

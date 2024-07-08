@@ -1,56 +1,30 @@
-# PgHandle React - Free React Tailwind Admin Dashboard Template
+# PgHandle Web App
 
-PgHandle is a free and open-source admin dashboard template built on **React and Tailwind CSS**, providing developers with everything they need to create a comprehensive, data-driven back-end,
-dashboard, or admin panel solution for upcoming web projects.
+PgHandle is a Paying Guest Rooms, Beds, PGs, Guests and Staff management Solution Web App. It provides facility to add PGs, Beds and rooms and manage the Guests coming to your PG. It provided upcoming CheckIns, Checkouts. Help in managing room charges and all.
 
-[![tailwind react admin template](https://ucarecdn.com/d2a6daed-eb9c-4c2f-8a95-4419c450e23a/PgHandlereact.jpg)](https://react-demo.PgHandle.com/)
+## Tech Stack
+- ReactJs
+- TypeScript
+- Tailwind CSS
+- Redux
 
-With PgHandle, you get access to all the necessary dashboard UI components, elements, and pages required to build a feature-rich and complete dashboard or admin panel. Whether you're building dashboard or admin panel for a complex web application or a simple website, PgHandle is the perfect solution to help you get up and running quickly.
+
+## SignUp Page
+![PG Handle signUp page](https://i.postimg.cc/L4x79spV/Screenshot-2024-07-08-at-8-08-55-PM.png)
+
+## SignIn Page
+![PG Handle SignIN Page](https://i.postimg.cc/3NhDzhL4/Screenshot-2024-07-08-at-8-08-39-PM.png)
+
+## Premises List Page
+![PG Handle Premises List Page](https://i.postimg.cc/GtSTtDLY/Screenshot-2024-07-08-at-8-09-08-PM.png)
+
+## Add A PG
+![PG Handle Add a PG](https://i.postimg.cc/tJXCb4F6/Screenshot-2024-07-08-at-8-22-37-PM.png)
+![PG Handle Add a PG](https://i.postimg.cc/cLYHf21r/Screenshot-2024-07-08-at-8-23-48-PM.png)
+
 
 ### [✨ Visit Website](https://PgHandle.com/)
 
-### [🚀 PRO Demo](https://react-demo.PgHandle.com/)
-
-### [🚀 FREE Demo](https://free-react-demo.PgHandle.com/)
-
-### PgHandle React PRO vs PgHandle React FREE Comparison 📊
-
-#### [PgHandle React PRO](https://react-demo.PgHandle.com/)
-
-- 4 Unique Dashboards: Analytics, Ecommerce, Marketing, and CRM (More will be added)
-- 120+ Dashboard UI Components
-- 200+ Total UI Elements
-- 45+ HTML Files
-- All Essential Elements and Files
-- Full Figma Design Source - As Shown on Demo
-
----
-
-#### [PgHandle React FREE](https://free-react-demo.PgHandle.com/)
-
-- 1 Unique Dashboard
-- 30+ Dashboard UI Components
-- 50+ Total UI Elements
-- 10+ HTML Files
-- TypeScript Support
-- Basic UI Kit Elements and Files
-- Figma Design Source - Free Sample
-
----
-
-### [⬇️ Download Now](https://PgHandle.com/download)
-
-### [⚡ Get PRO Version](https://PgHandle.com/pricing)
-
-### [📄 Documentation/Installation](https://PgHandle.com/docs)
-
-### [🖌️ PgHandle Figma Free Sample](https://www.figma.com/community/file/1214477970819985778)
-
-### [👉 PgHandle HTML Version](https://github.com/PgHandle/PgHandle-free-tailwind-dashboard-template)
-
-PgHandle React dashboard template based on Tailwind CSS is a pre-designed starting point for building a web-based dashboard using the React JavaScript library and the Tailwind CSS utility-first framework. This Tailwind CSS + React Dashboard Template - built using Tailwind CSS and **includes pre-built components, such as navigation menus, charts, tables, and forms, which can be easily customized and integrated into a small-to-large React web application**.
-
-If you're looking for a high-quality **React-Tailwind Dashboard, Admin Panel Template, or UI Kit**, PgHandle will be the perfect choice for you!
 
 ## PgHandle React - Installation
 
@@ -70,27 +44,3 @@ Run : <code>npm run build</code>
 Default build output directory: /dist
 
 This command will generate a dist as build folder in the root of your template that you can upload to your server.
-
-## Tons of React Tailwind Components for Dashboard
-
-React and Tailwind are two popular technologies that have taken the web development world by storm. React is a JavaScript library for building user interfaces, while Tailwind is a utility-first CSS framework that makes it easy to style web applications. PgHandle React Offers 200+ Essential React + Tailwind CSS UI Components that you copy-paste and use with your dashboard projects. That includes - charts, graphs, navbars, tabs, buttons, cards, tables, profile, tabs, forms, modals, app pages, calender, web apps example templates and more... for React and Styled using Tailwind CSS
-
-## Update Logs
-
-### Version 1.0.6 - [Jan 31, 2024]
-
-#### Enhancements
-
-- **Enhancement 01:** Integrate flatpickr in [Date Picker/Form Elements]
-- **Enhancement 02:** Change color after select an option [Select Element/Form Elements].
-- **Enhancement 03:** Make it functional [Multiselect Dropdown/Form Elements].
-- **Enhancement 04:** Make best value editable [Pricing Table One/Pricing Table].
-- **Enhancement 05:** Rearrange Folder structure.
-
-### Version 1.0.0 - [Apr 28, 2023]
-
-- Add Typescript in PgHandle React.
-
-### Version 1.0.0 - Initial Release - [Mar 13, 2023]
-
-- Initial release of PgHandle React.
